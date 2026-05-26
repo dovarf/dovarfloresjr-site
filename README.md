@@ -36,3 +36,23 @@ Content Direction Suggestions
 - Keep copy direct and short.
 - Focus on achievements and outcomes.
 - Add one section per month with new project updates.
+
+Safe Publish Routine (GitHub Live Site)
+1. Run this once to make the script executable:
+	chmod +x publish-live.sh
+2. Publish with a commit message:
+	./publish-live.sh "Update homepage and manuals"
+
+What this script stages
+- index.html
+- styles.css
+- script.js
+- CNAME
+- assets/docs/*.pdf
+
+Defaults
+- Remote: dovarfloresjr-site
+- Branch: main
+
+Optional overrides
+- REMOTE=origin BRANCH=main ./publish-live.sh "Publish to origin"
